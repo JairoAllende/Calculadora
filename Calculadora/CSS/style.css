@@ -3,44 +3,61 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #090c31;
 }
 
-#calculator{
-    background-color: darkblue;
-    width: 25%;
-    min-height: 350px;
-    border: 1px solid black;
-    display: grid;
-    grid-template-rows: 25% 75%;
-    box-sizing: border-box;
-    padding: 10px;
+.calculadora{
+    background-color: #15173c;
+    color: white;
+    width: 20%;
+    padding: 1.5rem;
+    border-radius: 1rem;display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
 }
 
-#display{
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-bottom: 10px;
+.display{
+    grid-column: 1/5;
+    background-color: #090c31;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-family: monospace;
+    font-weight: 600;
 }
 
-#buttons{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
+.btn{
+    background-color: #15173c;
+    color: white;
+    border: none;
+    padding: 1.5rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #090c31;
 
 }
 
-.rows{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
+#zero{
+    grid-column: span 2;
 }
 
-.lastRow{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    column-gap: 10px;
+#equal{
+    grid-row: span 2 ;
+    background-color: #e5394a;
+}
+
+#equal:hover{
+    background-color: #e65766;
 }
